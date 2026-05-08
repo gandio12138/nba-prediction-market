@@ -437,8 +437,10 @@ describe("ensureApprovals()", () => {
 
     // The first argument to relay.execute is the array of SafeTransactions.
     const firstCall = mockRelayExecute.mock.calls[0];
-    expect(Array.isArray(firstCall?.[0])).toBe(true);
-    expect((firstCall?.[0] as unknown[]).length).toBeGreaterThan(0);
+    expect(firstCall).toBeDefined();
+    const transactions = firstCall?.[0];
+    expect(Array.isArray(transactions)).toBe(true);
+    expect((transactions as unknown[]).length).toBeGreaterThan(0);
   });
 
   it("approves both V1 and V2 spenders — V2 markets fail silently without their approvals", async () => {

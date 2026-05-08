@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, vi, afterEach } from "vitest";
+import { describe, it, expect, vi, afterEach } from "vitest";
 import { discoverPolymarketProxy } from "../proxy-discovery.js";
 
 const EOA = "0x7b2d23fd477bbC52D98620cD36e2EAa470e0fC8C";
