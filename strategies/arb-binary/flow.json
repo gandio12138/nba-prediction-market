@@ -1,0 +1,12 @@
+{
+  "steps": ["scan", "signal", "risk", "execute", "log"],
+  "labels": {
+    "scan": "Scan Markets",
+    "signal": "Detect Signal",
+    "risk": "Risk Check",
+    "execute": "Execute",
+    "log": "Log"
+  },
+  "active": "",
+  "completed": []
+}

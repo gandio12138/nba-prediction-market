@@ -1,0 +1,12 @@
+{
+  "steps": ["scan", "signal", "risk", "entry", "log"],
+  "labels": {
+    "scan": "Scan NegRisk Markets",
+    "signal": "Evaluate Multi-leg Opportunity",
+    "risk": "Risk + Bottleneck Check",
+    "entry": "Dry-run Emit",
+    "log": "Log"
+  },
+  "active": "",
+  "completed": []
+}

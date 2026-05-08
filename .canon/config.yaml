@@ -1,0 +1,63 @@
+# Canon Agent Framework Configuration
+version: "1.0"
+
+default_agent: dev
+
+agents:
+  strategy-architect: .canon/agents/strategy-architect.md
+  risk-analyst: .canon/agents/risk-analyst.md
+  market-analyst: .canon/agents/market-analyst.md
+  dev: .canon/agents/dev.md
+  qa: .canon/agents/qa.md
+  deployment-ops: .canon/agents/deployment-ops.md
+
+skills:
+  prediction-markets: .canon/skills/prediction-markets.md
+  polymarket: .canon/skills/polymarket.md
+  risk-management: .canon/skills/risk-management.md
+  strategy-patterns: .canon/skills/strategy-patterns.md
+  backtesting: .canon/skills/backtesting.md
+  arena-tracking: .canon/skills/arena-tracking.md
+  orchestrator: .canon/skills/orchestrator.md
+  canon-conventions: .canon/skills/canon-conventions.md
+
+workflows:
+  discover: .canon/workflows/discover.yaml
+  develop: .canon/workflows/develop.yaml
+  register: .canon/workflows/register.yaml
+  ralph-cycle: .canon/workflows/ralph-cycle.yaml
+  quick-dev: .canon/workflows/quick-dev.yaml
+
+context_routing:
+  strategy_design:
+    agent: strategy-architect
+    auto_skills: [prediction-markets, strategy-patterns, risk-management]
+    workflow: discover
+  strategy_implementation:
+    agent: dev
+    auto_skills: [canon-conventions, backtesting, risk-management]
+    workflow: develop
+  registration:
+    agent: deployment-ops
+    auto_skills: [arena-tracking, risk-management]
+    workflow: register
+  risk_review:
+    agent: risk-analyst
+    auto_skills: [risk-management, prediction-markets]
+  market_analysis:
+    agent: market-analyst
+    auto_skills: [prediction-markets, polymarket]
+    workflow: discover
+  iteration:
+    agent: dev
+    auto_skills: [orchestrator, canon-conventions]
+    workflow: develop
+
+standards:
+  always_load: [canon-conventions]
+  enforce:
+    - "All strategies must implement TradeSignal and RiskInterface"
+    - "Position size never exceeds 5% of portfolio"
+    - "Domain layering: Types > Config > Repo > Service > Runtime > UI"
+    - "Error messages include what/why/how"
+    - "If it is not in the repo, it does not exist"

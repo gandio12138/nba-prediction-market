@@ -1,0 +1,12 @@
+{
+  "steps": ["scan", "signal", "risk", "emit", "log"],
+  "labels": {
+    "scan": "Scan Markets",
+    "signal": "Detect Premium Opportunity",
+    "risk": "Risk Check",
+    "emit": "Emit Dry-Run Signal",
+    "log": "Log"
+  },
+  "active": "",
+  "completed": []
+}

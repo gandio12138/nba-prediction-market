@@ -1,0 +1,21 @@
+version: 1
+strategy: nba-prediction-market
+
+success_criteria:
+  - id: types_compile
+    description: TypeScript compiles with no errors
+    check: "pnpm exec tsc --noEmit"
+    required: true
+
+  - id: lint_clean
+    description: Linter reports zero errors
+    check: "pnpm run lint"
+    required: true
+
+  - id: tests_pass
+    description: All tests pass
+    check: "pnpm exec vitest run"
+    required: true
+
+max_iterations: 5
+warn_at_iteration: 4

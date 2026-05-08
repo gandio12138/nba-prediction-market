@@ -1,0 +1,12 @@
+{
+  "steps": ["scan", "signal", "risk", "emit", "log"],
+  "labels": {
+    "scan": "Scan Markets",
+    "signal": "Score Divergence",
+    "risk": "Risk Check",
+    "emit": "Emit Dry-Run",
+    "log": "Log"
+  },
+  "active": "",
+  "completed": []
+}
