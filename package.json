@@ -3,12 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "description": "Canon Polymarket trading client templates and tests",
+  "description": "DEGA Canon NBA Playoffs prediction market momentum automation",
   "scripts": {
+    "start": "tsx src/main.ts",
+    "start:dry-run": "tsx src/main.ts",
     "typecheck": "tsc --noEmit",
     "lint": "oxlint --ignore-pattern node_modules --ignore-pattern nba-momentum .",
     "test": "vitest run",
-    "check": "tsc --noEmit && oxlint . && vitest run"
+    "check": "pnpm run typecheck && pnpm run lint && pnpm run test"
   },
   "engines": {
     "node": ">=22"
