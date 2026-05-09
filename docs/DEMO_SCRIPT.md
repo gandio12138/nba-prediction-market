@@ -84,4 +84,5 @@ Show:
 Talking points:
 
 - The repo includes setup docs, automation flow, submission copy, and demo instructions.
-- The remaining external tasks are pushing the public GitHub repo, uploading this video, and confirming whether DEGA Rank / leaderboard registration is required.
+- The public GitHub repo is ready at `https://github.com/gandio12138/nba-prediction-market`.
+- The remaining external tasks are uploading this video, submitting the DoraHacks BUIDL form, and completing DEGA Rank registration for live performance tracking.

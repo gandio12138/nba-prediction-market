@@ -2,35 +2,41 @@
 
 ## Current Status
 
-This repo is ready for the non-leaderboard submission package: source code, setup instructions, automation flow documentation, validation commands, and a demo-video script. DEGA Rank / leaderboard registration remains pending confirmation with the official DEGA/DoraHacks channel.
+This repo is ready for the code and documentation portion of the DoraHacks submission package: source code, setup instructions, automation flow documentation, validation commands, and a demo-video script. The remaining required artifact is the uploaded 3-5 minute demo video.
+
+The official page lists DEGA Rank Registration under Core Technology, and the prize is awarded by highest live profit percentage. Treat DEGA Rank as a competition-performance follow-up after the automation passes quality checks, even though it is not one of the four explicit submission artifacts.
 
 ## Hackathon Requirements Tracked
 
-Based on the current public competition listing mirror for the NBA Playoffs Prediction Market Hackathon:
+Based on the official DoraHacks NBA Playoffs Prediction Market Hackathon page:
 
 - Project description covering strategy approach and intended automation behavior
 - Public GitHub source code
 - Documentation with setup instructions and an about section describing the automation flow
 - 3-5 minute demo video
-- Use of DEGA/Canon AI tooling to build the automation
 
-Judging criteria listed by the public mirror:
+Judging criteria:
 
 - Innovation and Creativity: 25%
 - Technical Execution and Design: 30%
 - Real World Utility and Impact: 30%
 - Presentation and Demo: 15%
 
-Timeline listed by the public mirror:
+Timeline:
 
-- Start: 2026-05-04
-- End: 2026-06-01
+- Submission opens: 2026-05-04 14:00
+- Deadline: 2026-06-01 13:59
 - Registration closes: 2026-05-31
+- Winners announced: 2026-06-23
+
+Prize:
+
+- Total prize pool: $1,000 USD stablecoin
+- First place: $1,000, awarded to the best performer by highest profit percentage
 
 Sources to re-check before final submission:
 
 - Official DoraHacks page: https://dorahacks.io/hackathon/nba-prediction-market/detail
-- Public mirror used for cross-checking: https://www.competehub.dev/en/competitions/dorahacksnba-prediction-market
 - DEGA Canon planning issue: https://github.com/DEGAorg/claude-code-config/issues/75
 
 ## Submission Checklist
@@ -43,10 +49,10 @@ Sources to re-check before final submission:
 - [x] Environment variable reference added in `.env.example`
 - [x] Demo video script drafted in `docs/DEMO_SCRIPT.md`
 - [x] Typecheck/lint/test commands available through `pnpm run check`
-- [ ] Public GitHub remote created and pushed
+- [x] Public GitHub remote created and pushed: https://github.com/gandio12138/nba-prediction-market
 - [ ] Demo video recorded and uploaded
 - [ ] DoraHacks project form filled with final GitHub/video URLs
-- [ ] DEGA Rank / leaderboard registration confirmed or explicitly marked not required
+- [ ] DEGA Rank registration completed for live performance / leaderboard tracking
 
 ## Project Description Draft
 

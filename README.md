@@ -6,7 +6,7 @@
 
 The hackathon asks for AI-assisted prediction market automations built with DEGA's Canon workflow. This project turns the Canon TypeScript templates into a runnable NBA-focused scanner: it searches Polymarket markets for low-probability outcomes that are repricing upward on volume, then applies risk gates before logging a dry-run decision or, only with `--live`, submitting capped CLOB limit orders.
 
-DEGA Rank / leaderboard registration is intentionally left as a pending final-submission item until confirmed with the official channel.
+The DoraHacks submission package is source-code/documentation/demo-video based. Because the prize is awarded by live profit percentage, DEGA Rank registration is tracked as a competition-performance follow-up after the project passes quality checks.
 
 ## Quick Start
 
@@ -109,6 +109,6 @@ Current local verification completed on 2026-05-08:
 
 Final items still outside this repo:
 
-- Public GitHub repository URL
 - 3-5 minute demo video URL
-- DEGA Rank / leaderboard registration decision after confirmation
+- DoraHacks BUIDL form submission
+- DEGA Rank registration for live performance / leaderboard tracking
