@@ -4,7 +4,11 @@
 
 This repo is ready for the code and documentation portion of the DoraHacks submission package: source code, setup instructions, automation flow documentation, validation commands, and a demo-video script. The remaining required artifact is the uploaded 3-5 minute demo video.
 
-The official page lists DEGA Rank Registration under Core Technology, and the prize is awarded by highest live profit percentage. Treat DEGA Rank as a competition-performance follow-up after the automation passes quality checks, even though it is not one of the four explicit submission artifacts.
+DEGA clarified on 2026-05-14 that registration is purely on DoraHacks. There is
+no separate Canon project, strategy, wallet, or DEGA Rank registration step for
+dry-run submissions. If the automation is run live, submit the Polymarket wallet
+address and automation logs from `.canon/execution/`; if it is not run live, the
+public GitHub repo plus 3-5 minute demo video are the submission package.
 
 ## Hackathon Requirements Tracked
 
@@ -21,6 +25,12 @@ Judging criteria:
 - Technical Execution and Design: 30%
 - Real World Utility and Impact: 30%
 - Presentation and Demo: 15%
+
+Live trading is not strictly required to submit. However, Real World Utility is
+evaluated on actual live performance against Polymarket markets, so a dry-run
+only submission will not have live P&L evidence for that 30% scoring segment.
+If running live, plan for the May 31-June 19 window. There is no minimum
+funding requirement.
 
 Timeline:
 
@@ -52,7 +62,12 @@ Sources to re-check before final submission:
 - [x] Public GitHub remote created and pushed: https://github.com/gandio12138/nba-prediction-market
 - [ ] Demo video recorded and uploaded
 - [ ] DoraHacks project form filled with final GitHub/video URLs
-- [ ] DEGA Rank registration completed for live performance / leaderboard tracking
+- [ ] Optional live package, if running live: wallet address plus
+      `.canon/execution/` automation logs
+
+Note: `.canon/execution/` is ignored by git. If live trading is enabled, review
+the JSONL logs and attach the relevant files separately in the DoraHacks
+submission or project notes.
 
 ## Project Description Draft
 
@@ -104,7 +119,10 @@ Validation:
 pnpm run check
 ```
 
-Live mode is optional and requires a funded/onboarded Polymarket wallet:
+Live mode is optional. It is not required for DoraHacks submission, but live
+performance affects the Real World Utility scoring segment. If you run live,
+use an onboarded Polymarket wallet funded at whatever level you are comfortable
+with and keep automation logs from `.canon/execution/` for submission:
 
 ```bash
 pnpm run start -- --live

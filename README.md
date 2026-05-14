@@ -6,7 +6,7 @@
 
 The hackathon asks for AI-assisted prediction market automations built with DEGA's Canon workflow. This project turns the Canon TypeScript templates into a runnable NBA-focused scanner: it searches Polymarket markets for low-probability outcomes that are repricing upward on volume, then applies risk gates before logging a dry-run decision or, only with `--live`, submitting capped CLOB limit orders.
 
-The DoraHacks submission package is source-code/documentation/demo-video based. Because the prize is awarded by live profit percentage, DEGA Rank registration is tracked as a competition-performance follow-up after the project passes quality checks.
+The DoraHacks submission package is source-code/documentation/demo-video based. DEGA clarified that there is no separate DEGA Rank, Canon project, wallet, or strategy registration step for dry-run submissions. Registration is handled entirely through DoraHacks.
 
 ## Quick Start
 
@@ -72,6 +72,18 @@ pnpm run start -- --live
 
 Before live mode starts, the app checks pmxt capabilities, Polymarket onboarding status, CLOB API credentials, USDC collateral, allowance readiness, and wallet auth. `MAX_ORDERS` caps the number of live submissions per process run. Project wallet secrets live in `.canon/wallet.env`, which is ignored by git.
 
+Live trading is optional for hackathon submission. If the strategy is not run
+live, no Polymarket wallet address is required. If the strategy is run live,
+DEGA expects the wallet address and automation logs from `.canon/execution/`.
+There is no minimum funding requirement; fund only at a level you are
+comfortable with. Live performance contributes to the Real World Utility
+criterion, so a dry-run-only submission can still enter but will not have live
+P&L evidence for that scoring segment.
+
+`.canon/execution/` is ignored by git on purpose. If you run live, review the
+JSONL logs and attach the relevant files separately in the DoraHacks submission
+or project notes; do not commit wallet secrets.
+
 ## Configuration
 
 | Variable | Default | Purpose |
@@ -111,4 +123,5 @@ Final items still outside this repo:
 
 - 3-5 minute demo video URL
 - DoraHacks BUIDL form submission
-- DEGA Rank registration for live performance / leaderboard tracking
+- Optional if running live: Polymarket wallet address and automation logs from
+  `.canon/execution/`

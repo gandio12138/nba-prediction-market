@@ -9,6 +9,8 @@ Talking points:
 - This is an NBA Playoffs prediction-market automation built with DEGA Canon.
 - The strategy is TRADE-02 momentum trading on Polymarket NBA markets.
 - The default mode is dry-run so reviewers can inspect behavior without risking funds.
+- DEGA clarified that dry-run submissions only need the DoraHacks package:
+  public GitHub repo plus 3-5 minute demo video.
 
 Show:
 
@@ -59,6 +61,9 @@ Talking points:
 - `MAX_ORDERS` caps live order submission per process run.
 - Position sizing uses fractional Kelly and exposure caps.
 - Wallet secrets are ignored by git through `.canon/wallet.env` and `.env`.
+- Live trading is optional. If the strategy is not run live, no Polymarket
+  wallet address is needed. If it is run live, submit the wallet address and
+  automation logs from `.canon/execution/`.
 
 ## 3:45-4:30 - Validation
 
@@ -85,4 +90,6 @@ Talking points:
 
 - The repo includes setup docs, automation flow, submission copy, and demo instructions.
 - The public GitHub repo is ready at `https://github.com/gandio12138/nba-prediction-market`.
-- The remaining external tasks are uploading this video, submitting the DoraHacks BUIDL form, and completing DEGA Rank registration for live performance tracking.
+- Registration is handled only through DoraHacks. There is no separate DEGA
+  Rank, Canon project, wallet, or strategy registration step for dry-run
+  submission.
